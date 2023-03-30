@@ -1,0 +1,6 @@
+reader=open('input.txt','r')
+a,b,c,d,e=list(map(int,reader.read().rstrip().split('\n')))
+reader.close()
+brick=sorted([a,b,c])
+window=sorted([d,e])
+print('YES') if brick[0]<=window[0] and brick[1]<=window[1] else print('NO')

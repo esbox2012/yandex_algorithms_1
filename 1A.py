@@ -1,4 +1,4 @@
-def cond(troom: int, tcond: int, r: str):
+def cond(troom: int, tcond: int, r: str) -> int:
     if (r == 'freeze' and troom >= tcond) or (r == 'heat' and troom <= tcond):
         return tcond
     if (r == 'heat' and troom > tcond) or (r == 'freeze' and troom < tcond):

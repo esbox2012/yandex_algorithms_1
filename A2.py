@@ -1,13 +1,9 @@
 def check_seq(s):
     s = s.split()
-    f = True
-    key = s[0]
-    for i in s[1:]:
-        if i > key:
-            key = i
-        else:
-            f = False
-    return 'YES' if f else 'NO'
+    i = 1
+    while i < len(s) and s[i] > s[i - 1]:
+        i += 1
+    return 'YES' if i == len(s) else 'NO'
 
 
 if __name__ == '__main__':

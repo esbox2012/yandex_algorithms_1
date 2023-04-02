@@ -1,5 +1,5 @@
 from unittest import TestCase, main
-from A2 import check_seq
+from lecture_2.A2 import check_seq
 
 
 class CheckSeqTest(TestCase):

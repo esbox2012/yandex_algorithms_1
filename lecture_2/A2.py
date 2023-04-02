@@ -1,4 +1,4 @@
-def check_seq(s):
+def check_seq(s: str) -> str:
     s = s.split()
     i = 1
     while i < len(s) and s[i] > s[i - 1]:

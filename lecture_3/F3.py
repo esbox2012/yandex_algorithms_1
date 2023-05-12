@@ -1,8 +1,12 @@
 def make_pairs(sequence: str) -> list:
+    if not isinstance(sequence, str):
+        raise TypeError('Use string format!')
     return [sequence[i:i + 2] for i in range(len(sequence) - 1)]
 
 
 def make_genome_dict(genome: list) -> dict:
+    if not isinstance(genome, list):
+        raise TypeError('Use list format!')
     genome_dict = dict()
     for pair in genome:
         genome_dict[pair] = genome_dict.get(pair, 0) + 1
@@ -10,6 +14,8 @@ def make_genome_dict(genome: list) -> dict:
 
 
 def similarity(genome_1: str, genome_2: str) -> int:
+    if not isinstance(genome_1, str) or not isinstance(genome_2, str):
+        raise TypeError('Use string format!')
     count = 0
     genome_1 = make_pairs(genome_1)
     genome_2 = set(make_pairs(genome_2))

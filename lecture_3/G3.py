@@ -1,4 +1,6 @@
 def count_honest_turtles(turtles: list, amount_of_turtles: int) -> int:
+    if not isinstance(amount_of_turtles, int):
+        raise TypeError('Use numbers')
     honest_turtles = set()
     for turtle in turtles:
         a_front, b_back = map(int, turtle.split())

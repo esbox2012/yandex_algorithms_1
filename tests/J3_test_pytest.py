@@ -10,5 +10,6 @@ def test_lang():
     with pytest.raises(TypeError):
         lang(3)
 
+
 if __name__ == '__main__':
-        pytest.main()
+    pytest.main()

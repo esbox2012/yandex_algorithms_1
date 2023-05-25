@@ -1,4 +1,6 @@
 def lang(languages: list) -> tuple:
+    if not isinstance(languages,list):
+        raise TypeError('Use list')
     com = languages[0]
     ind = languages[0]
     for language in range(1, len(languages)):
@@ -16,7 +18,6 @@ if __name__ == '__main__':
         current_student = int(students[student_number])
         languages_.append(set(students[student_number + 1:student_number + current_student + 1]))
         student_number += current_student + 1
-
     result = lang(languages_)
     print(result[0])
     for i in result[1]:
